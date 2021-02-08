@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Second View -->
+    <Transition
+        app:constraintSetEnd="@id/end_view_color"
+        app:constraintSetStart="@+id/start_view_color"
+        app:duration="1000">
+        <OnSwipe
+            app:touchAnchorId="@id/view"
+            app:touchAnchorSide="top"
+            app:dragDirection="dragUp"/>
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/start_view_color">
+        <Constraint android:id="@+id/view">
+            <Layout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <CustomAttribute
+                app:attributeName="backgroundColor"
+                app:customColorValue="@color/aqua"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end_view_color">
+        <Constraint android:id="@id/view">
+            <Layout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <CustomAttribute
+                app:attributeName="backgroundColor"
+                app:customColorValue="@color/black"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

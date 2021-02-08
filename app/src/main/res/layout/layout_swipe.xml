@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    android:id="@+id/swipe_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    app:layoutDescription="@xml/layout_swipe_scene">
+
+    <View
+        android:id="@+id/trail_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_container_white"
+        app:layout_constraintTop_toTopOf="@id/view_trail"
+        app:layout_constraintBottom_toBottomOf="@id/view_trail"
+        app:layout_constraintStart_toStartOf="@id/view_trail"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/view_trail"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_shape_slide_green_gradient"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
